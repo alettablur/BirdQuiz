@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Gabriele Matteoli">
     <title>BirdQuiz - You Lose!</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="list-of-answers">
     <div class="container">
         <h1 class="question-text">You lose!!</h1>
 
-        <div>
-            <button onclick="document.location='homepage.html'">Try again</button>
-        </div>
-
-        <br>
         <img src="images/_4lose/loser-pinguin.jpg" alt="Pinguin">
+        
+        <div>
+            <button onclick="document.location='pageOne.html'">Try again</button>
+        </div>
     </div>
 
     <script>
         let losses = parseInt(localStorage.getItem('quiz_losses') || 0);
         localStorage.setItem('quiz_losses', losses + 1);
     </script>
+
 </body>
 </html>

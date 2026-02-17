@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Gabriele Matteoli">
-        <meta name="description" content="BirdQuiz">
-        <link rel="stylesheet" href="style.css">
-        <title>BirdQuiz - Statistics</title>
-    </head>
-    <body class="list-of-answers">
-        <h1 class="question-text">Quiz Statistics</h1>
-        
-        <div class="stats-box">
-            <p>Full Name: <span id="fullName"></span></p>
-            <p>Attempts: <span id="attempts"></span></p>
-            <p>Wins: <span id="wins"></span></p>
-            <p>Losses: <span id="losses"></span></p>
-        </div>
 
-        <br><br>
-        <button onclick="document.location='homepage.html'">Back to Home</button>
-        <br><br>
-        <button onclick="resetAll()" style="background-color: #dc3545;">Reset All Data</button>
-        
-        <script>
-            document.getElementById('fullName').innerText = localStorage.getItem('fname') + " " + localStorage.getItem('lname');
-            document.getElementById('attempts').innerText = localStorage.getItem('quiz_attempts') || 0;
-            document.getElementById('wins').innerText = localStorage.getItem('quiz_wins') || 0;
-            document.getElementById('losses').innerText = localStorage.getItem('quiz_losses') || 0;
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriele Matteoli">
+    <meta name="description" content="BirdQuiz">
+    <link rel="stylesheet" href="style.css">
+    <title>BirdQuiz - Statistics</title>
+</head>
 
-            function resetAll() {
-                if(confirm("Are you sure you want to reset all statistics?")) {
-                    localStorage.clear();
-                    window.location.href = "index.html";
-                }
+<body class="list-of-answers">
+    <h1 class="question-text">Quiz Statistics</h1>
+    
+    <div class="stats-box">
+        <p>Full Name: <span id="fullName"></span></p>
+        <p>Attempts: <span id="attempts"></span></p>
+        <p>Wins: <span id="wins"></span></p>
+        <p>Losses: <span id="losses"></span></p>
+    </div>
+
+    <br><br>
+    <button onclick="document.location='homepage.html'">Back to Home</button>
+    <br><br>
+    <button onclick="resetAll()" style="background-color: #dc3545;">Reset All Data</button>
+    
+    <script>
+        document.getElementById('fullName').innerText = localStorage.getItem('fname') + " " + localStorage.getItem('lname');
+        document.getElementById('attempts').innerText = localStorage.getItem('quiz_attempts') || 0;
+        document.getElementById('wins').innerText = localStorage.getItem('quiz_wins') || 0;
+        document.getElementById('losses').innerText = localStorage.getItem('quiz_losses') || 0;
+
+        function resetAll() {
+            if(confirm("Are you sure you want to reset all statistics?")) {
+                localStorage.clear();
+                window.location.href = "index.html";
             }
-        </script>
-    </body>
+        }
+    </script>
+    
+</body>
 </html>

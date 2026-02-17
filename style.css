@@ -6,6 +6,7 @@ body, html {
 
 button {
     padding: 12px 24px;
+    margin: 20px 0;
     background-color: #007bff;
     color: white;
     border: none;
@@ -19,16 +20,37 @@ button:hover {
 
 /* Formattazione immagini */
 img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
     padding: 5px;
     width: 150px;
     height: 150px;
+    margin: 20px 0;
 }
 
 /* Effetto hover */
 img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.card-deck {
+    max-width: 900px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.card-deck .card {
+    max-width: 200px;
+}
+
+.card-deck .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.card-deck .card-body {
+    padding: 15px;
 }
 
 /* Stile figure (senza Flexbox) */
@@ -49,6 +71,9 @@ figcaption {
     text-align: center;
     font-size: 28pt;
     font-family: inherit;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 /* Classe per il contenitore risposte */
@@ -71,6 +96,11 @@ figcaption {
 /* Rimuove la sottolineatura dai link */
 .flex-item {
     text-decoration: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(90%) saturate(500%) hue-rotate(0deg);
 }
 
 .stats-box {

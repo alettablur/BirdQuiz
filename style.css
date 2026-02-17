@@ -1,0 +1,98 @@
+/* Unificazione globale */
+body, html {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Formattazione immagini */
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+/* Effetto hover */
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/* Stile figure (senza Flexbox) */
+figure {
+    vertical-align: top;
+    display: inline-block;
+}
+
+/* Stile didascalia */
+figcaption {
+    display: block;
+    font-size: 18pt;
+    font-family: inherit;
+}
+
+/* Classe per la domanda */
+.question-text {
+    text-align: center;
+    font-size: 28pt;
+    font-family: inherit;
+}
+
+/* Classe per il contenitore risposte */
+.list-of-answers {
+    text-align: center;
+}
+
+/* Stile del contenitore Flex */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-between;
+    text-align: center;
+    font-family: inherit;
+    font-size: 18pt;
+}
+
+/* Rimuove la sottolineatura dai link */
+.flex-item {
+    text-decoration: none;
+}
+
+.stats-box {
+    border: 2px solid #000; /* Bordo nero deciso come il logo */
+    border-radius: 8px;
+    display: inline-block;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 4px 4px 0px #ddd; /* Ombra netta */
+    margin: 20px 0;
+}
+
+/* Testo delle etichette nelle statistiche */
+.stats-box p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Responsive: diventa colonna sotto gli 800px */
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}

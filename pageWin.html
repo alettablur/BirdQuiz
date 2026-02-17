@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriele Matteoli">
+    <title>BirdQuiz - You Win!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="list-of-answers">
+    <div class="container">
+        <h1 class="question-text">You win!!</h1>
+        <h3>You are a bird expert</h3>
+
+        <div>
+            <button onclick="document.location='homepage.html'">Play again</button>
+        </div>
+
+        <br>
+        <img src="images/_5win/win-pinguin.jpg" alt="Pinguin">
+    </div>
+
+    <script>
+        // Gestione statistiche: incrementa vittorie
+        let wins = parseInt(localStorage.getItem('quiz_wins') || 0);
+        localStorage.setItem('quiz_wins', wins + 1);
+    </script>
+</body>
+</html>
